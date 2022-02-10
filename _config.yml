@@ -6,9 +6,9 @@ exclude:
 gems: [jekyll-assets, uglifier, jekyll-admin, mini_magick]
 
 assets:
-  # compress: 
-  #   css: true
-  #   js: true
+  compress: 
+    css: true
+    js: true
   digest: true
   assets:
     - "*.js"
