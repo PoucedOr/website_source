@@ -1,0 +1,24 @@
+exclude:
+  - "/bower_components/"
+  - "bower.json"
+  - "*.inutile"
+
+gems: [jekyll-assets, uglifier, jekyll-admin, mini_magick]
+
+assets:
+  # compress: 
+  #   css: true
+  #   js: true
+  digest: true
+  assets:
+    - "*.js"
+    - "*.css"
+    - "*.jpg"
+    - "*.png"
+  sources:
+    - assets/js
+    - assets/css
+    - assets/img
+    - assets/bower/jquery/dist
+  features:
+    automatic_img_size: false

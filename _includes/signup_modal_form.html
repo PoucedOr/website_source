@@ -1,0 +1,127 @@
+<div id="modal1" class="modal modal-fixed-footer">
+	<div class="modal-content">
+		<h4>Inscription au site du Pouce d'Or</h4>
+
+		<blockquote style="margin-left:70px;">
+			Remplis bien tous les champs pour pouvoir t'inscire.
+			<p>
+				Cela ne t'engage à rien. L'inscription à la course se fait dans un second temps (lors de la formation du binôme).
+			</p>
+			Les mails et numéros de téléphone n'apparaîtront nulle part sur ce site. 
+		</blockquote>
+		
+		<form action="" method="POST" class="registration_form" id="registration_form">
+
+			<div class="row">
+				<div class="col s12 m12 input-field">
+					<input 
+						placeholder="prenom.nom@ecole.fr" 
+						id="email" 
+						name="email" 
+						type="text" 
+						class="validate"
+						data-error=".errorTxt1"
+						required>
+					<label for="email" class="required">Adresse e-mail</label>
+					<div class="errorTxt1"></div>
+				</div>
+
+				<div class="col s12 m6 input-field">
+					<input 
+						placeholder="*********" 
+						id="plainPasswordFirst" 
+						name="plainPasswordFirst" 
+						type="password" 
+						class="validate" 
+						required>
+					<label for="plainPasswordFirst" class="required">Mot de passe</label>
+					<div class="errorTxt2"></div>
+				</div>
+
+				<div class="col s12 m6 input-field">
+					<input 
+						placeholder="*********" 
+						id="plainPasswordSecond"
+						name="plainPasswordSecond"
+						type="password" 
+						class="validate" 
+						required>
+					<label for="plainPasswordSecond" class="required">Vérification</label>
+					<div class="errorTxt3"></div>
+				</div>
+
+				<div class="col s12 m4 input-field ">
+					<input 
+						id="first_name"
+						name="first_name"
+						type="text" 
+						class="validate" 
+						required>
+					<label for="first_name" class="required">Prénom</label>
+					<div class="errorTxt4"></div>
+				</div>
+
+				<div class="col s12 m4 input-field ">
+					<input 
+						id="last_name"
+						name="last_name" 
+						type="text" 
+						class="validate" 
+						required>
+					<label for="last_name" class="required">Nom</label>
+					<div class="errorTxt5"></div>
+				</div>
+
+				<div class="col s12 m4 input-field">
+					<select 
+						id="sex"
+						name="sex"
+						required>
+						<option value="" disabled selected>Choisissez votre sexe</option>
+						<option value="Homme">Homme</option>
+						<option value="Femme">Femme</option>
+				    </select>
+				</div>
+
+				<div class="input-field col s12 m12">
+					<input 
+						id="telephone" 
+						name="telephone"
+						type="text" 
+						class="validate" 
+						required>
+					<label for="telephone" class="required">Numéro de téléphone</label>
+				</div>
+
+				<div class="input-field col s12 m12">
+					<select 
+						id="university"
+						name="university"
+						required>
+						<option value="" disabled selected>Choisissez votre école ou université</option>
+						<option value="1"></option>
+				    </select>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<input 
+					type="checkbox"
+					id="CGU"
+					name="CGU"
+					required>
+				<label for="CGU">J'ai lu et j'accepte les conditions générales du site et le règlement du concours, disponibles <a href="">ici</a>. Je déclare l'exactitude des informations rentrées ci-dessus.</label>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button 
+			class="modal-action modal-close btn waves-effect waves-light"
+			type="submit"
+			id="submit"
+			value=""/>Enregistrer
+			<i class="material-icons right">send</i>
+		</button>
+	</div>
+</div>

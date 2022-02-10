@@ -1,0 +1,82 @@
+<script>
+	function Onglets(id) {
+		CloseMultiDiv('classement');
+		document.getElementById(id).style.display='inline';
+		document.getElementById('button_mobile_dropdown').text='Classement ' + id;
+	}
+		function CloseMultiDiv(Nom){
+        for (i=0; i<document.getElementsByTagName('div').length; i++) {
+            if (document.getElementsByTagName('div').item(i).className == Nom){
+                document.getElementsByTagName('div').item(i).style.display='none';
+            }
+        }
+    }
+	</script>
+
+
+<div class="parallax-container firstimage">
+	<div class="parallax"><img src="/assets/img/classements.jpg" alt="Unsplashed background img 2"></div>
+</div>
+<h4 class="center">Classements</h4>
+<div class="row section" id="pageclassement">
+	<div class="col m2 striped z-depth-2 hide-on-small-only" id="liensclassement">
+		<ul>
+			<li class="liensclassementtop"><a href="#" onclick="Onglets('2016');return false;">Classement 2016</a></li>
+			<li class="liensclassementtop"><a href="#" onclick="Onglets('Defis');return false;">Classement défis</a></li>
+			<li class="liensclassementtop"><a href="#" onclick="Onglets('Top25');return false;">Top 25</a></li>
+			<li class="hrclassement"><hr/></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2015');return false;">Classement 2015</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2014');return false;">Classement 2014</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2013');return false;">Classement 2013</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2012');return false;">Classement 2012</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2011');return false;">Classement 2011</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2010');return false;">Classement 2010</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2009');return false;">Classement 2009</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2008');return false;">Classement 2008</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2006');return false;">Classement 2006</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2005');return false;">Classement 2005</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2004');return false;">Classement 2004</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2003');return false;">Classement 2003</a></li>
+		</ul>
+	</div>
+	<div class="col s12 hide-on-med-and-up row">
+		<select onChange="Onglets(this.value);return false;">
+			<optgroup label="Derniers classements">
+				<option value="2016">2016</option>
+				<option value="Defis">Défis</option>
+				<option value="Top25">Top 25</option>
+			</optgroup>
+			<optgroup label="Archives">
+				<option value="2015">2015</option>
+				<option value="2014">2014</option>
+				<option value="2013">2013</option>
+				<option value="2012">2012</option>
+				<option value="2011">2011</option>
+				<option value="2010">2010</option>
+				<option value="2009">2009</option>
+				<option value="2008">2008</option>
+				<option value="2006">2006</option>
+				<option value="2005">2005</option>
+				<option value="2004">2004</option>
+				<option value="2003">2003</option>
+			</optgroup>
+		</select>
+	</div>
+	<div class="col s12 m10">
+		<div class="classement" id="2016">{% include classements/classement2016.html %}</div>
+		<div class="classement" id="Defis" style="display:none;">{% include classements/classementdefis.html %}</div>
+		<div class="classement" id="Top25" style="display:none;">{% include classements/classement25.html %}</div>
+		<div class="classement" id="2015" style="display:none;">{% include classements/classement2015.html %}</div>
+		<div class="classement" id="2014" style="display:none;">{% include classements/classement2014.html %}</div>
+		<div class="classement" id="2013" style="display:none;">{% include classements/classement2013.html %}</div>
+		<div class="classement" id="2012" style="display:none;">{% include classements/classement2012.html %}</div>
+		<div class="classement" id="2011" style="display:none;">{% include classements/classement2011.html %}</div>
+		<div class="classement" id="2010" style="display:none;">{% include classements/classement2010.html %}</div>
+		<div class="classement" id="2009" style="display:none;">{% include classements/classement2009.html %}</div>
+		<div class="classement" id="2008" style="display:none;">{% include classements/classement2008.html %}</div>
+		<div class="classement" id="2006" style="display:none;">{% include classements/classement2006.html %}</div>
+		<div class="classement" id="2005" style="display:none;">{% include classements/classement2005.html %}</div>
+		<div class="classement" id="2004" style="display:none;">{% include classements/classement2004.html %}</div>
+		<div class="classement" id="2003" style="display:none;">{% include classements/classement2003.html %}</div>
+	</div>
+</div>
